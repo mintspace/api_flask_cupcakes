@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Cakes</title>
+</head>
+
+<body>
+	<section class="container">
+
+		<h1>Cakes</h1>
+		<hr>
+
+		<div class="row mb-4">
+			<form action="" class="col-md-4" id="cupcake-form">
+				<div class="form-group">
+					Flavor <input type="text" class="form-control input-flavor" name="flavor">
+					Size <input type="text" class="form-control input-size" name="size">
+					Rating <input type="text" class="form-control input-rating" name="rating">
+					Image <input type="text" class="form-control input-image" name="image">
+				</div>
+				<button class="btn btn-success btn-lg" id="add-cake">Add</button>
+			</form>
+		</div>
+
+		<div class="row" id="cupcake-list">
+			{% for cake in cakes %}
+			<div class="col-md-4">
+				<h3>{{cake.flavor}}</h3>
+				{{cake.size}}, {{cake.rating}}
+				<button class="btn btn-secondary btn-sm delete-cake" data-id="{{cake.id}}">delete</button>
+				<p><img class="img-fluid mt-3" src="{{cake.image}}" alt=""></p>
+			</div>
+			{% endfor %}
+		</div>
+
+	</section>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"
+		integrity="sha256-T/f7Sju1ZfNNfBh7skWn0idlCBcI3RwdLSS4/I7NQKQ=" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+		crossorigin="anonymous"></script>
+	<script src="static/app.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
