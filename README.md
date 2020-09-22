@@ -1,4 +1,4 @@
-##JSON API
+## JSON API
 
 * GET /api/cupcakes
 * GET /api/cupcakes/[cupcake-id]
@@ -8,33 +8,33 @@
 
 ![Rendering preferences pane](https://mintspace.github.io/api_flask_cupcakes/cupcake.png)
 
-##Setup
+## Setup
 
 
-###Clone directory:
+### Clone directory:
 
 	$ git clone https://github.com/mintspace/api_flask_cupcakes.git
 
-###Create Python virtual environment:
+### Create Python virtual environment:
 
 	$ python -m venv venv
 	$ source venv/bin/activate
 	(venv) $ pip install -r requirements.txt
 
-###Setup and seed database:
+### Setup and seed database:
 
 	(venv) $ createdb cupcakes
 	(venv) $ python seed.py
 
-###Start server:
+### Start server:
 
 	(venv) $ flask run
 
-##Testing
+## Testing
 
 	(venv) $ python -m unittest
 
-##Built With
+## Built With
 
 * [Axios](https://github.com/axios/axios)
 * [Flask](https://flask.palletsprojects.com/en/1.1.x/)
